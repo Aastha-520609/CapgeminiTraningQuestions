@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class UserInterface {
+	
+	public static void main(String[] arg)
+    {
+        // Fill the code
+		Scanner sc = new Scanner(System.in);
+		Ticket ticket = new Ticket();
+		System.out.println("Enter movie name");
+		String movieName = sc.next();
+		
+		System.out.println("Enter no of bookings");
+		int noOfBookings = sc.nextInt();
+		
+		System.out.println("Enter the available tickets");
+		int availableTickets = sc.nextInt();
+		if(availableTickets == 0) {
+			System.out.println("House full");
+		}
+		
+		System.out.println("Enter the ticketid");
+		int ticketId = sc.nextInt();
+		
+		System.out.println("Enter the price");
+		int price = sc.nextInt();
+		
+		System.out.println("Enter the no of tickets");
+		int noOfTickets = sc.nextInt();
+		if(noOfTickets > availableTickets) {
+			System.out.println("Tickets are not available");
+		}
+		
+		System.out.println("Available tickets: "+ availableTickets);
+		int totalAmount = ticket.calculateTicketCost(noOfTickets);
+		System.out.println("Total Amount: " + totalAmount);
+		System.out.println("Available ticket after booking" + (availableTickets - noOfTickets) );
+    }
+}
+

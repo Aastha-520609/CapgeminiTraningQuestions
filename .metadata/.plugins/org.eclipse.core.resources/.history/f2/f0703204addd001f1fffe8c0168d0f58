@@ -1,0 +1,16 @@
+
+public class CustomerDetails {
+	
+	// Fill the code
+
+	public double calculateBonusPoints() {
+		// Fill the code
+		return 0;
+	}
+
+	public double deliveryCharge() {
+		// Fill the code
+		return 0;
+	}
+	
+}

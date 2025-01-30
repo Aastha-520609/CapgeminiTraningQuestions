@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class UserInterface {
+    public static void main(String args[])
+    {
+        // fill the code here
+        Scanner sc= new Scanner(System.in);
+    }
+    
+
+}

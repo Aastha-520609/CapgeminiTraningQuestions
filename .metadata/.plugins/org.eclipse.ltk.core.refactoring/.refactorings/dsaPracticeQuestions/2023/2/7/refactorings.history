@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;oopsConcept.basicOfClassAndObject&apos; to &apos;AreaOfRectangle&apos;&#x0D;&#x0A;- Original project: &apos;dsaPracticeQuestions&apos;&#x0D;&#x0A;- Original element: &apos;oopsConcept.basicOfClassAndObject&apos;&#x0D;&#x0A;- Renamed element: &apos;oopsConcept.AreaOfRectangle&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;basicOfClassAndObject&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;oopsConcept{basicOfClassAndObject.java[basicOfClassAndObject" matchStrategy="1" name="AreaOfRectangle" qualified="false" references="true" similarDeclarations="false" stamp="1676653175709" textual="false" version="1.0"/>
+</session>

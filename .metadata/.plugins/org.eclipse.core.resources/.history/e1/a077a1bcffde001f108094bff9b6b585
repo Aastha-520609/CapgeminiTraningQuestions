@@ -1,0 +1,14 @@
+
+public class UserInterface
+{
+	public String getDuplicateElement()
+    {
+        // Fill the code
+        return null;
+    }
+	
+	public static void main(String[] args)
+    {
+        // Fill the code
+    }
+}

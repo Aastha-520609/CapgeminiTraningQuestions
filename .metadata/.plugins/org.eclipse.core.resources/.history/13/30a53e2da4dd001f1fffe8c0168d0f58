@@ -1,0 +1,11 @@
+
+public class EducationalEndowment {
+	
+	// Fill the code
+
+	public double calculateEndowment(){
+		// Fill the code
+		return 0;
+	}
+
+}

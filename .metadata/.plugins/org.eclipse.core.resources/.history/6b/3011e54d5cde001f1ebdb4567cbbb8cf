@@ -1,0 +1,13 @@
+
+public class DayScholar {
+	
+	// Fill the code
+	
+	public double calculateTotalFee() {
+		
+		// Fill the code
+		
+		return 0;
+	}
+
+}

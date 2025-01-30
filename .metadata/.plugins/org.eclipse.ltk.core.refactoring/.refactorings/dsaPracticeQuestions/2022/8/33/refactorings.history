@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;collectionFramework.TreeMap&apos; to &apos;Tree_map&apos;&#x0D;&#x0A;- Original project: &apos;dsaPracticeQuestions&apos;&#x0D;&#x0A;- Original element: &apos;collectionFramework.TreeMap&apos;&#x0D;&#x0A;- Renamed element: &apos;collectionFramework.Tree_map&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TreeMap&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;collectionFramework{TreeMap.java[TreeMap" matchStrategy="1" name="Tree_map" qualified="false" references="true" similarDeclarations="false" stamp="1660385450533" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class UserInterface
+{
+	public static void main(String[] args)
+	{
+        
+	       Scanner sc = new Scanner(System.in);
+	       System.out.println("Enter the sentence");
+	       String sentence = sc.nextLine();
+	       if(!sentence.matches("[a-zA-z ]+")){
+	    	   System.out.println(sentence + " is an invalid input");
+	       }
+	       
+	       sentence = sentence.toLowerCase();
+	       
+	       StringBuilder result = new StringBuilder();
+	       for(int i=0; i<sentence.length(); i++) {
+	    	   char ch = sentence.charAt(i);
+	    	   char ch1 = sentence.charAt(i+1);
+	    	   if(ch < ch1) {
+	    		   result.append(ch);
+	    	   }
+	       }
+	       
+	       System.out.println(result.toString());
+	    }
+
+}

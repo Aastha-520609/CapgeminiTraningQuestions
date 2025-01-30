@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class UserInterface {
+	
+	public static String validateInput(int numOfAdults, int numOfChildren, int numOfDays) {
+		if(numOfAdults < 0) {
+			return "Invalid input for number of adults";
+		}
+		
+		if(numOfChildren < 0) {
+			return "Invalid input for number of childrens";
+		}
+		
+		if(numOfDays <= 0) {
+			return "Invalid input for number of days";
+		}
+		
+		return "Valid";
+	}
+	
+	public static int totalCost(int numOfAdults, int numOfChildren, int numOfDays) {
+		int adultCost = 1000;
+		int childCost = 650;
+		int result = (numOfAdults * adultCost + numOfChildren * childCost) * numOfDays;
+		return result;
+	}
+	
+    public static void main(String args[])
+    {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Enter the customer details");
+      String input = sc.nextLine();
+      
+      String[] details = input.split(":");
+      
+      String customerName = details[0];
+      int numOfAdults = Integer.parseInt(details[1]);
+      int numOfChildren = Integer.parseInt(details[2]);
+      int numOfDays = Integer.parseInt(details[3]);
+      
+      String validMessage = validateInput(numOfAdults, numOfChildren, numOfDays);
+      
+	  if(!validMessage.equals("Valid")) {
+		  System.out.println(validMessage);
+	  }
+	  else {
+			int totalCost = totalCost(numOfAdults, numOfChildren, numOfDays);
+			System.out.println(customerName + " your booking is confirmed and the total cost is " + totalCost);
+	  }
+      
+    }
+}

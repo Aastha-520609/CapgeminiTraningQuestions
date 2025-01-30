@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class UserInterface {
+	
+	public static void main(String args[])
+    {
+       Scanner sc=new Scanner(System.in);
+       // Fill the code
+    }
+	
+	public String extractString(String sentence,int number1,int number2)
+    {
+        // Fill the code
+        return null;
+    }
+
+}

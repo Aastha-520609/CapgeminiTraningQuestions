@@ -1,0 +1,11 @@
+public class Ticket
+{
+    // Fill the code
+    
+    public int calculateTicketCost(int nooftickets)
+    {
+        // Fill the code
+        return 0;
+    }
+    
+}

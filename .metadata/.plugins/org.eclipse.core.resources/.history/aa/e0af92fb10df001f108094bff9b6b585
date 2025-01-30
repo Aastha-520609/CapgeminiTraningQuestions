@@ -1,0 +1,47 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class UserInterface 
+{
+	public static boolean validCode(String code) {
+		String codeRegex = "^#([A-Z]{4})([0-9]{3})$";
+		Pattern pattern = Pattern.compile(codeRegex);
+		Matcher matcher = pattern.matcher(code);
+		return matcher.matches();
+	}
+	
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your profile code");
+		String code = sc.next();
+		
+		if (code.length() != 8) {
+            System.out.println(code + " does not have the specified length");
+            return;
+        }
+
+        if (code.charAt(0) != '#') {
+            System.out.println(code + " does not start with a valid special character");
+            return;
+        }
+
+        String upperCase = code.substring(1, 5);
+        for (int i = 0; i < upperCase.length(); i++) {
+            if (!Character.isUpperCase(upperCase.charAt(i))) {
+                System.out.println(upperCase.charAt(i) + " is an invalid number for uppercase character");
+                return;
+            }
+        }
+
+        String digits = code.substring(5);
+        for (int i = 0; i < digits.length(); i++) {
+            if (!Character.isDigit(digits.charAt(i))) {
+                System.out.println(digits.charAt(i) + " is an invalid number for digits");
+                return;
+            }
+        }
+        
+        System.out.println(code + " is a valid profile code whose last 3 digits are " + digits);
+	}
+}
