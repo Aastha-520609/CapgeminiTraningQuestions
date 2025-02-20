@@ -6,7 +6,7 @@ public class UserInterface
 {
 	public static void main(String args[]) 
 	{
-		Scanner sc =new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		
 		//Call the addition method with two arguments 10,15
 		int result1 = addition(10,15);

@@ -5,6 +5,7 @@ import com.test.Main;
 import com.util.EStore;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class EStoreTest {
 		List<OnlineOrder> orders = new ArrayList<>();
 		orders.add(new OnlineOrder(1, "Alice", "Laptop", "Electronics", 1, "Home Delivery", 50000.0));
 		orders.add(new OnlineOrder(2, "Bob", "Phone", "Mobiles", 2, "Store Pickup", 30000.0));
+		orders.add(new OnlineOrder(3, "Charlie", "Laptop", "Electronics", 1, "Home Delivery", 70000.0));
 		bObj.setOnlineOrderList(orders);
 	}
 
@@ -57,8 +59,10 @@ public class EStoreTest {
 	
 	//Test the validateItemType method when the item type is Invalid
 	@Test
-	public void test15ValidateItemTypeWhenInvalid() throws InvalidOnlineOrderException{
-		bObj.validateItemType("InvalidType");
+	public void test15ValidateItemTypeWhenInvalid(){
+		assertThrows(InvalidOnlineOrderException.class, () -> {
+	        bObj.validateItemType("InvalidType");
+	    });
 	}
 	
 	
@@ -73,7 +77,9 @@ public class EStoreTest {
 
 	//Test the viewOnlineOrdersByOrderId method when the value is Invalid
 	@Test
-	public void test17ViewOnlineOrdersByOrderIdWhenInvalid()  throws InvalidOnlineOrderException{
-		 bObj.viewOnlineOrdersByOrderId(999);
+	public void test17ViewOnlineOrdersByOrderIdWhenInvalid(){
+		assertThrows(InvalidOnlineOrderException.class, () -> {
+	        bObj.viewOnlineOrdersByOrderId(999);
+	    });
 	} 
 }

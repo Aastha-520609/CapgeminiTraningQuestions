@@ -7,12 +7,15 @@ public class UserInterface
 		//Fill code here 
 		System.out.println("Enter the name");
 		String name = sc.next();
+		
 		System.out.println("Enter the number of rooms you needed");
 		int numberOfRooms = sc.nextInt();
+		
 		while (numberOfRooms <= 0) {
 	            System.out.println("Please enter a valid number");
 	            numberOfRooms = sc.nextInt();
 	        }
+		
 		System.out.println("Enter the phone number");
 		long number = sc.nextLong();
 		
