@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+<bean id = "staffObj" class = "com.spring.app.Staff">
+   <constructor-arg value = "1"></constructor-arg>
+   <constructor-arg value = "Ragul"></constructor-arg>
+   <constructor-arg value = "CSE"></constructor-arg>
+   <constructor-arg value = "9445543300"></constructor-arg>
+</bean>
+
+<bean id = "departmentObj" class = "com.spring.app.Department">
+      <constructor-arg value = "123"></constructor-arg>
+      <constructor-arg>
+	      <list>
+	           <ref bean = "staffObj" />
+	      </list>
+      </constructor-arg>
+
+</bean>
+  
+</beans>
