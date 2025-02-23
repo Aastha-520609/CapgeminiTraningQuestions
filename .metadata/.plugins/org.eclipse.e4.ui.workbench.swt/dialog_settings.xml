@@ -9,12 +9,8 @@
 		<item key="ShowViewDialog.STORE_SELECTED_VIEW_ID" value="ee.ut.cs.eclexsys.ui.ExerciseView"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="General"/>
+			<item value="Dynamic Languages"/>
 			<item value="Exercise Submission"/>
-			<item value="Git"/>
-			<item value="Gradle"/>
-			<item value="Help"/>
-			<item value="Java"/>
-			<item value="Java Browsing"/>
 			<item value="Terminal"/>
 		</list>
 	</section>

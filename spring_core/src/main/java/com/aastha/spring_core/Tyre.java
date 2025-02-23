@@ -20,7 +20,4 @@ public class Tyre {
 		super();
 		this.brand = brand;
 	}
-	
-	
-
 }
