@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>Welcome App</display-name>
+  
+ <!--  Defines a servlet (a Java class that handles HTTP requests). -->
+  <servlet>
+   <!--  Identifies the servlet by a unique name. Here, it’s called dispatcher. -->
+    <servlet-name>dispatcher</servlet-name>
+    <!-- Specifies the fully qualified class name of the servlet. -->
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    
+     <!-- Provides initialization parameters for the servlet. -->
+    <init-param>
+    <!-- contextConfigLocation tells Spring where to find additional XML configurations. -->
+      <param-name>contextConfigLocation</param-name>
+      <!-- /WEB-INF/dispatcher-servlet.xml is the configuration file where Spring beans and MVC setup reside. -->
+      <param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
+    </init-param>
+    
+    
+    
+  <!--   Purpose: Controls when the servlet is loaded:
+    1 means the servlet loads when the application starts (eager loading).
+    Higher numbers indicate delayed loading. -->
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+   <!-- Maps a servlet to a specific URL pattern. -->
+  <servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <!-- /: Maps all requests to the DispatcherServlet. -->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Defines a listener that performs tasks on app startup and shutdown. -->
+  <listener>
+       <!-- ContextLoaderListener: Loads the Spring application context when the application starts.
+        It allows you to use Spring beans globally across servlets. -->
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  
+  <!-- Defines global parameters accessible to all servlets. -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <!-- Path to the Spring configuration file (dispatcher-servlet.xml). -->
+    <param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
+  </context-param>
+</web-app>

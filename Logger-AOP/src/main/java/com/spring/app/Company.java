@@ -19,10 +19,7 @@ public class Company {
 
 	public boolean registerEmployee(Employee e)
 	{
-		
-
 		return al.add(e);
-		
 	}
 	
 }

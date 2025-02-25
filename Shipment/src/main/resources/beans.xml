@@ -9,9 +9,9 @@
     <bean id = "item" class = "com.spring.app.Item" scope = "prototype"></bean>
     
     <bean id = "shipment" class = "com.spring.app.Shipment" scope = "prototype">
-        <property name="item" ref = "item"></property>
+         <property name="item" ref="item"></property>
     </bean>
  
 </beans>
-			
+						
 	

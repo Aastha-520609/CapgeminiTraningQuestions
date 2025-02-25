@@ -11,7 +11,6 @@ public class Driver {
 
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
 		
-		
 		Company comObj=(Company)ctx.getBean(Company.class);
 		Employee empObj=(Employee)ctx.getBean(Employee.class);
 		empObj.setEmpId(100);

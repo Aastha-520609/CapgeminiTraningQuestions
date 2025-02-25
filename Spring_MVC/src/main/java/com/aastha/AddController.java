@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.aastha.service.AddService;
+
 @Controller
 public class AddController {
 	
@@ -14,12 +16,13 @@ public class AddController {
 	public ModelAndView addNumbers(HttpServletRequest request, HttpServletResponse response) {
         int num1 = Integer.parseInt(request.getParameter("num1"));
         int num2 = Integer.parseInt(request.getParameter("num2"));
-        int sum = num1 + num2;
         
-        ModelAndView model = new ModelAndView();
-        model.setViewName("display");
+        AddService as = new AddService();
+        int sum = as.add(num1, num2);
+        
+        ModelAndView model = new ModelAndView("display");
         model.addObject("result", sum);
         
-        return model;
+        return model;	
     }
 }
