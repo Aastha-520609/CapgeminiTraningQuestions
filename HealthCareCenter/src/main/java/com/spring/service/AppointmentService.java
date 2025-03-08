@@ -8,8 +8,9 @@ import com.spring.model.Appointment;
 public class AppointmentService {
 	
 	public int bookAppointment(Appointment appointment)  {			
-		//fill the code
-		switch(appointment.getConsultationFor()) {
+		
+		String consultation = appointment.getConsultationFor(); 
+		switch(consultation) {
 			case "Optometry": return 500;
 			case "Psychology": return 350;
 			case "Pediatrist": return 750;

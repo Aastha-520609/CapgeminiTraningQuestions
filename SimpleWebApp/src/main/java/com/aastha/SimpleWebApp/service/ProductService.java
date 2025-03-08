@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.aastha.SimpleWebApp.model.Product;
 
@@ -40,7 +41,6 @@ public class ProductService {
 		}
 		
 		products.set(index, prod);
-		
 	}
 
 	public void deleteProduct(int prodId) {

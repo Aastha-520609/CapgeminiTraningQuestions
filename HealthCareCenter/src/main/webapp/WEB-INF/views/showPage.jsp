@@ -1,69 +1,88 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" isELIgnored="false" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>V Care 4 U - Book Appointment</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
         #message {
-            color: red;
+            margin-top: 20px;
+            text-align: center;
+            color: #333;
         }
     </style>
 </head>
+<body>
+    <div class="container">
+        <h1>Book Your Appointment</h1>
 
-<body style="background-color:lavender">
+        <form action="/consultation" method="post">
+            <label for="consultationFor">Choose Consultation:</label>
+            <select id="consultationFor" name="consultationFor">
+                <c:forEach items="${consultationList}" var="consultation">
+                    <option value="${consultation}">${consultation}</option>
+                </c:forEach>
+            </select>
 
-<a href="/showPage?language=en">English</a> | <a href="/showPage?language=fr">French</a>
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" name="patientName" required>
 
-<h1><center>Health Care Center</center></h1>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
 
-<form:form method="POST" action="/consultation" modelAttribute="patient">
-    <table style="margin: 0px auto;">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required>
 
-        <!-- Patient Name -->
-        <tr>
-            <td><spring:message code="label.patientName" /></td>
-            <td><form:input path="patientName" id="patientName" required="true" /></td>
-        </tr>
+            <button type="submit" name="submit">Book Appointment</button>
+        </form>
 
-        <!-- Age -->
-        <tr>
-            <td><spring:message code="label.age" /></td>
-            <td><form:input path="age" id="age" type="number" required="true" /></td>
-        </tr>
-
-        <!-- Phone Number -->
-        <tr>
-            <td><spring:message code="label.phoneNumber" /></td>
-            <td><form:input path="phoneNumber" id="phoneNumber" required="true" /></td>
-        </tr>
-
-        <!-- Consultation For -->
-        <tr>
-            <td><spring:message code="label.consultationFor" /></td>
-            <td>
-                <form:select path="consultationFor" id="consultationFor">
-                    <form:option value="Optometry">Optometry</form:option>
-                    <form:option value="Pediatrist">Pediatrist</form:option>
-                    <form:option value="Physical therapy">Physical therapy</form:option>
-                    <form:option value="Dentistry">Dentistry</form:option>
-                    <form:option value="Psychology">Psychology</form:option>
-                </form:select>
-            </td>
-        </tr>
-
-        <!-- Submit -->
-        <tr>
-            <td colspan="2">
-                <input type="submit" value="Submit" />
-            </td>
-        </tr>
-
-    </table>
-</form:form>
-
-<div id="message">${message}</div>
-
+        <div id="message">${message}</div>
+    </div>
 </body>
 </html>

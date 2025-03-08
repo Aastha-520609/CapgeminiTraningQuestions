@@ -1,8 +1,14 @@
-//DO NOT EDIT OR DELETE
-public class FruitBasket {
+public class FruitBasket{
+	
 	private String fruitName;
 	private int weightInKgs;
 	private int pricePerKg;
+	
+	FruitBasket(String fruitName, int weightInKgs, int pricePerKg){
+		this.fruitName = fruitName;
+		this.weightInKgs = weightInKgs;
+		this.pricePerKg = pricePerKg;
+	}
 	
 	public String getFruitName() {
 		return fruitName;
@@ -27,16 +33,4 @@ public class FruitBasket {
 	public void setPricePerKg(int pricePerKg) {
 		this.pricePerKg = pricePerKg;
 	}
-	
-	public FruitBasket(String fruitName, int weightInKgs, int pricePerKg) {
-		super();
-		this.fruitName = fruitName;
-		this.weightInKgs = weightInKgs;
-		this.pricePerKg = pricePerKg;
-	}
-	
-	public FruitBasket() {
-		super();
-	}
-	
 }

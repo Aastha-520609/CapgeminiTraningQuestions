@@ -12,6 +12,8 @@ import com.spring.service.AppointmentService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class AppointmentController {
@@ -19,7 +21,7 @@ public class AppointmentController {
 	@Autowired
 	private AppointmentService service;
 	
-	@GetMapping("/showPage")
+	@RequestMapping("/showPage")
 	public String showPage(ModelMap model) {
 	    model.addAttribute("appointment", new Appointment());
 	    return "showPage";
@@ -36,12 +38,12 @@ public class AppointmentController {
 		return consultationList;
 	}
 
-	//invoke the service class - bookAppointment method.
-	@PostMapping("/consultation")
+	@RequestMapping(value = "/consultation", method = RequestMethod.POST)
 	public String bookAppointment(@ModelAttribute("appointment") Appointment appointment, ModelMap model) {		
 			int charges = service.bookAppointment(appointment);	
+			model.addAttribute("consultationList", populateConsultation());
 			model.addAttribute("message", "Thanks for visiting. Your consultation charges is Rs. " + charges);
-			return "views/showPage";
+			return "showPage";
 	}
 	
 }
