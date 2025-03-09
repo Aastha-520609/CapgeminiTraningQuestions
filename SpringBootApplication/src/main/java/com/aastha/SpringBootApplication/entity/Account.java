@@ -20,7 +20,7 @@ import lombok.Setter;
 public class Account {
 	
 	@Id  //making id as a primary key
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //implements primary key
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-generates IDs
 	private Long id;
 	
 	@Column(name = "account_holder_name")

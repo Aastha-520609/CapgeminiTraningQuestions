@@ -1,5 +1,8 @@
 package com.spring.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Appointment {
 	
 	private String patientName; 		

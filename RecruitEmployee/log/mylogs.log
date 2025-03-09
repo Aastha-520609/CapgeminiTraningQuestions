@@ -2,3 +2,4 @@
 [ERROR] 03-03-2025 10:49:37.745 AM [http-nio-8081-exec-3]  com.service.RecruitService - Candidate List is empty
 [ERROR] 03-03-2025 10:55:52.289 AM [http-nio-8081-exec-3]  com.service.RecruitService - Candidate List is empty
 [ERROR] 03-03-2025 11:05:33.151 AM [http-nio-8081-exec-3]  com.service.RecruitService - Candidate List is empty
+[ERROR] 09-03-2025 05:54:17.990 PM [http-nio-8081-exec-4]  com.service.RecruitService - Candidate List is empty

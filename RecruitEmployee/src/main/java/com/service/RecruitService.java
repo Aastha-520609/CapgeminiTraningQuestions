@@ -15,8 +15,8 @@ public class RecruitService {
 	private final Logger logger = LoggerFactory.getLogger(RecruitService.class);
 	List<Candidate> candidateList = new ArrayList<>();
 	
-	public void setCandidateist(List<Candidate> candidateList) {
-		this.candidateList=candidateList;
+	public void setCandidateList(List<Candidate> candidateList) {
+		this.candidateList = candidateList;
 	}
 
 	public List<Candidate> getCandidateList() {
@@ -25,10 +25,12 @@ public class RecruitService {
 
 	public void insertCandidate(Candidate candidate) {
 		
-		//fill code to add the candidate object to candidateList
-		candidateList.add(candidate);
-		logger.info("Candidate details added successfully");
-	
+		try {
+			candidateList.add(candidate);
+	        logger.info("Candidate inserted: " + candidate);
+	    } catch (Exception e) {
+	        logger.error("Error inserting candidate: " + e.getMessage());
+	    }
 	}
 	
 	public List<Candidate> viewAllCandidates(){

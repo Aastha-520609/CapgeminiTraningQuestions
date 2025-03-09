@@ -33,12 +33,6 @@ public class RecruitController {
 	
     @GetMapping("/showCandidatePage")
     public String showPage(@ModelAttribute("candidate") Candidate candidate) {			
-        if (candidate == null) {
-            candidate = new Candidate(); // Ensure a new Candidate object is created if null
-        }
-        if (custValidator == null || service == null) {
-            throw new IllegalStateException("Dependencies not injected properly in showPage");
-        }
         return "showPage";
     }
 	

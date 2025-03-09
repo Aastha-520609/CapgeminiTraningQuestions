@@ -18,7 +18,7 @@ import com.aastha.SpringBootApplication.DTO.AccountDTO;
 import com.aastha.SpringBootApplication.service.AccountService;
 
 @RestController
-@RequestMapping("/api/accounts")
+@RequestMapping("/api/accounts") //base url
 public class AccountController {
 	
 	private AccountService accountService;

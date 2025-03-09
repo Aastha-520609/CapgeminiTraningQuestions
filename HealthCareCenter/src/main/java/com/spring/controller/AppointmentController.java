@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping("/")
 public class AppointmentController {
 	
 	@Autowired
 	private AppointmentService service;
 	
-	@RequestMapping("/showPage")
-	public String showPage(ModelMap model) {
-	    model.addAttribute("appointment", new Appointment());
+	@GetMapping("/showPage")
+	public String showPage(@ModelAttribute("appointment") Appointment appointment) {
 	    return "showPage";
 	}
 	
@@ -38,10 +38,10 @@ public class AppointmentController {
 		return consultationList;
 	}
 
-	@RequestMapping(value = "/consultation", method = RequestMethod.POST)
+	@PostMapping("/consultation")
 	public String bookAppointment(@ModelAttribute("appointment") Appointment appointment, ModelMap model) {		
-			int charges = service.bookAppointment(appointment);	
-			model.addAttribute("consultationList", populateConsultation());
+			
+		    int charges = service.bookAppointment(appointment);	
 			model.addAttribute("message", "Thanks for visiting. Your consultation charges is Rs. " + charges);
 			return "showPage";
 	}
