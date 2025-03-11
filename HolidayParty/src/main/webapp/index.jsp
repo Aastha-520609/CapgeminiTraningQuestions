@@ -9,6 +9,6 @@
   <body bgcolor="lavender">
    <center> <h2>Welcome to Online Registration for Holiday Party</h2></center>
   
-    <center><a href="registerpage">Click here for Registration.</a></center>
+    <center><a href="registerPage">Click here for Registration.</a></center>
    </body>
 </html>

@@ -16,23 +16,19 @@ public class RegistrationController {
 	@Autowired
 	private CustomValidator custValidator;
 	
-	@RequestMapping("/registerPage")
-	public String registerPage(RegistrationBean  registrationBean, BindingResult result) {
+	@RequestMapping(value = "/registerPage", method = RequestMethod.GET)
+	public String registerPage(@ModelAttribute("register") RegistrationBean registrationBean, BindingResult result) {
 		return "registrationpage";
 	}
 	
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public String performRegistration(@ModelAttribute("register") RegistrationBean  registrationBean, BindingResult result,
-			ModelMap model) {
+	public String performRegistration(@ModelAttribute("register") RegistrationBean registrationBean, BindingResult result) {
 		
 		custValidator.validate(registrationBean, result);
 		
 		if(result.hasErrors()) {
 			return "registrationpage";
 		}
-		
-		model.addAttribute("userName", registrationBean.getUserName());
-		model.addAttribute("emailId", registrationBean.getEmailId());
 		
 		return "thankyou";
 	}

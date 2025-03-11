@@ -10,39 +10,37 @@
 <form:form method="post" action="register" modelAttribute="register">
 <table style="margin: 0px auto; margin-left: auto; margin-right:auto">
             <tr>
-                <td>Name:</td>
-                <td><form:input path="userName" /></td>
-                <td><form:errors path="userName" style="color:red;" /></td>
+                <td>UserName:</td>
+                <td><form:input path="userName" name="userName"/></td>
+                <td><form:errors path="userName" /></td>
             </tr>
 
             <tr>
                 <td>Contact Number:</td>
-                <td><form:input path="contactNumber" /></td>
-                <td><form:errors path="contactNumber" style="color:red;" /></td>
+                <td><form:input path="contactNumber" name="contactNumber"/></td>
+                <td><form:errors path="contactNumber" /></td>
             </tr>
 
             <tr>
-                <td>Email:</td>
-                <td><form:input path="emailId" /></td>
-                <td><form:errors path="emailId" style="color:red;" /></td>
+                <td>Email Id:</td>
+                <td><form:input path="emailId" name="emailId"/></td>
+                <td><form:errors path="emailId" /></td>
             </tr>
 
             <tr>
-                <td>Confirm Email:</td>
-                <td><form:input path="confirmEmailId" /></td>
-                <td><form:errors path="confirmEmailId" style="color:red;" /></td>
+                <td>Confirm Email Id:</td>
+                <td><form:input path="confirmEmailId" name="confirmEmailId" /></td>
+                <td><form:errors path="confirmEmailId" /></td>
             </tr>
 
             <tr>
-                <td>Agree to terms:</td>
-                <td><form:checkbox path="status" /></td>
-                <td><form:errors path="status" style="color:red;" /></td>
+                <td><input type="checkbox" name="status" id="status" /></td>
+                <td><form:errors path="status" /></td>
             </tr>
 
             <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="Register" />
-                </td>
+                <td><input type="submit" name="submit" value="Register"/>
+                <td><input type="reset" value="Cancel" /></td>
             </tr>
 </table>
 </form:form>
