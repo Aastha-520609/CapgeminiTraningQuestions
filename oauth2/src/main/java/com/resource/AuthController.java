@@ -27,3 +27,5 @@ public class AuthController {
 		return "Successfully logged in!!";
 	}
 }
+
+//Handles authentication and provide student details if the user is authenticated

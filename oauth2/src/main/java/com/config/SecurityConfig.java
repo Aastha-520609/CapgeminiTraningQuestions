@@ -21,13 +21,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	 @Value("${security.role}")
 	 private String role;
 	 
-	 
-	 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
     	http
     	   .authorizeRequests()
-    	   .antMatchers("/login", "/oauth/authorize").permitAll()
+    	   .antMatchers("/login", "/oauth/authorize", "/student/getStudent").permitAll()
     	   .anyRequest().authenticated()
     	   .and()
     	   .formLogin();

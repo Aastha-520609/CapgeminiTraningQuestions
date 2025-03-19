@@ -31,13 +31,14 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter
 	@Value("${security.refresh-token-validity-seconds}")
 	private int refreshTokenValiditySeconds;
 	
-	
  	@Autowired
  	private BCryptPasswordEncoder passwordEncoder;
 
 	@Override
 	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-		security.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()");
+		security
+		       .tokenKeyAccess("permitAll()")
+		       .checkTokenAccess("permitAll()");
 	}
 
 	@Override
@@ -45,7 +46,7 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter
 		clients.inMemory()
 		.withClient(clientId)
 		.secret(passwordEncoder.encode(pwd))
-		.authorizedGrantTypes("password", "authorization_code", "refresh_token")
+		.authorizedGrantTypes("client_credentials", "password", "authorization_code", "refresh_token")
 		.scopes(scope)
 		.redirectUris(redirectUrl)
 		.accessTokenValiditySeconds(accessTokenValiditySeconds)

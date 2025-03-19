@@ -1,5 +1,10 @@
-[ERROR] 03-03-2025 10:43:10.924 AM [http-nio-8081-exec-3]  com.service.RecruitService - Candidate List is empty
-[ERROR] 03-03-2025 10:49:37.745 AM [http-nio-8081-exec-3]  com.service.RecruitService - Candidate List is empty
-[ERROR] 03-03-2025 10:55:52.289 AM [http-nio-8081-exec-3]  com.service.RecruitService - Candidate List is empty
-[ERROR] 03-03-2025 11:05:33.151 AM [http-nio-8081-exec-3]  com.service.RecruitService - Candidate List is empty
-[ERROR] 09-03-2025 05:54:17.990 PM [http-nio-8081-exec-4]  com.service.RecruitService - Candidate List is empty
+[ERROR] 11-03-2025 06:04:56.538 AM [http-nio-8088-exec-3]  com.service.RecruitService - Candidate List is empty
+[ERROR] 11-03-2025 06:05:24.422 AM [http-nio-8088-exec-4]  com.service.RecruitService - Candidate List is empty
+[INFO ] 11-03-2025 06:08:11.518 AM [http-nio-8088-exec-1]  com.service.RecruitService - Candidate details added successfully
+[INFO ] 11-03-2025 06:08:14.245 AM [http-nio-8088-exec-2]  com.service.RecruitService - Candidate details are listed
+[INFO ] 11-03-2025 06:09:25.559 AM [http-nio-8088-exec-6]  com.service.RecruitService - Candidate details are listed
+[INFO ] 11-03-2025 06:10:53.514 AM [http-nio-8088-exec-9]  com.service.RecruitService - Candidate details added successfully
+[INFO ] 11-03-2025 12:12:15.907 PM [http-nio-8088-exec-5]  com.service.RecruitService - Candidate details added successfully
+[INFO ] 11-03-2025 12:12:38.260 PM [http-nio-8088-exec-7]  com.service.RecruitService - Candidate details are listed
+[INFO ] 11-03-2025 12:12:50.684 PM [http-nio-8088-exec-8]  com.service.RecruitService - Candidate details are listed
+[INFO ] 11-03-2025 12:20:20.547 PM [http-nio-8088-exec-2]  com.service.RecruitService - Candidate details added successfully

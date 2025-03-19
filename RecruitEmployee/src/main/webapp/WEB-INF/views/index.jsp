@@ -15,11 +15,8 @@ div{
 <body style="background-color:lavender">
 <h1><center>Aspire Technologies</center></h1>
 
-<!-- Fill the code -->
-<div>
-    <a href="/showCandidatePage">Register Candidate</a><br>
-    <a href="/viewAllCandidateList">View All Candidates</a>
-</div>
+<a href="/showCandidatePage">Register Candidate</a>
+<a href="/viewAllCandidateList">View all Candidates</a>
 
 </body>
 </html>	 	  	    	    	     	      	 	

@@ -87,6 +87,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\Programs\eclipse-workspace\RecruitEmployee"/>
+			<item value="D:\Programs\eclipse-workspace\HolidayParty"/>
+			<item value="D:\Programs\eclipse-workspace\SpringOauth2"/>
 			<item value="D:\Programs\eclipse-workspace\QuizApplication"/>
 			<item value="D:\Programs\eclipse-workspace\SpringSecurityExample"/>
 			<item value="D:\Programs\eclipse-workspace\SpringBootApplication"/>
